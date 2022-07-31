@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
+import { faSass, faHtml5, faCss3, faReact, faJsSquare, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -35,6 +37,28 @@ const About = () => {
           <p>
             In my spare time, I enjoy roller derby, cooking, playing video games and trying out new projects to help expand my skills! 
           </p>
+        </div>
+        <div className="stage-cube-cont">
+            <div className="cubespinner">
+                <div className="face1">
+                    <FontAwesomeIcon icon={faSass} color="#C69" />
+                </div>
+                <div className="face2">
+                    <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+                </div>
+                <div className="face3">
+                    <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+                </div>
+                <div className="face4">
+                    <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+                </div>
+                <div className="face5">
+                    <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+                </div>
+                <div className="face6">
+                    <FontAwesomeIcon icon={faGithub} color="#666666" />
+                </div>
+            </div>
         </div>
     </div>
   )
