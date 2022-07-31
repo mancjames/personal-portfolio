@@ -4,12 +4,12 @@
     position: absolute;
   }
   
-  .top-tags {
+.top-tags {
     bottom: auto;
     top: 35px;
   }
   
-  .tags {
+.tags {
     color: #ffd700;
     opacity: 0.6;
     position: absolute;
@@ -19,11 +19,11 @@
     font-family: 'La Belle Aurore', cursive;
   }
   
-  .bottom-tag-html {
+.bottom-tag-html {
     margin-left: -20px;
   }
   
-  .container {
+.container {
     width: 100%;
     will-change: contents;
     height: 90%;
@@ -38,7 +38,7 @@
     animation-delay: 1s;
   }
 
-  .container.contact-page,
+.container.contact-page,
 .container.about-page,
 .container.portfolio-page {
   
@@ -47,6 +47,7 @@
       font-family: 'Coolvetica';
       color: #ffd700;
       font-weight: 400;
+      letter-spacing: 2px;
       margin-top: 0;
       position: relative;
       margin-bottom: 40px;
