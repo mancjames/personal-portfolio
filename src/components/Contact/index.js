@@ -3,6 +3,11 @@ import './index.scss'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import emailjs from '@emailjs/browser';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import "leaflet/dist/leaflet.css";
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import L from 'leaflet';
 
 const Contact = () => {
     const title = "Contact me"
@@ -14,6 +19,13 @@ const Contact = () => {
           setLetterClass('text-animate-hover')
         }, 4000)
       }, [])
+
+      let DefaultIcon = L.icon({
+        iconUrl: icon,
+        shadowUrl: iconShadow
+    });
+    
+    L.Marker.prototype.options.icon = DefaultIcon;
 
       const form = useRef();
 
@@ -80,6 +92,27 @@ const Contact = () => {
             </form>
         </div>
        </div>
+       <div className="info-map">
+          James Hay,
+          <br />
+          Middleton,
+          <br />
+          Manchester <br />
+          UK <br />
+        </div>
+        <div className="map-wrap">
+        <MapContainer center={[53.5459, -2.2019]} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[53.55048992769389, -2.1999397964099603]}>
+            <Popup>
+              Welcome to Middleton! <br />
+            </Popup>
+          </Marker>
+      </MapContainer>
+        </div>
     </div>
     <Loader type="pacman" />
     </>
