@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect} from 'react'
 import './index.scss'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
 import icon from 'leaflet/dist/images/marker-icon.png';
@@ -27,20 +27,21 @@ const Contact = () => {
     
     L.Marker.prototype.options.icon = DefaultIcon;
 
-      const form = useRef();
+      // const form = useRef();
 
-      const sendEmail = (e) => {
-        e.preventDefault();
+      // const sendEmail = (e) => {
+      //   e.preventDefault();
+      //   window.location.reload(false)
 
-        emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
-          .then(() => {
-            alert('Message successfully sent!')
-            window.location.reload(false)
-          }, (error) => {
-            alert('Failed to send the message, please try again');
-            console.log(error.text)
-          });
-      };
+      //   // emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
+      //   //   .then(() => {
+      //   //     alert('Message successfully sent!')
+      //   //     window.location.reload(false)
+      //   //   }, (error) => {
+      //   //     alert('Failed to send the message, please try again');
+      //   //     console.log(error.text)
+      //   //   });
+      // };
 
   return (
     <>
@@ -57,7 +58,7 @@ const Contact = () => {
             If you have any requests or questions, please don't hesitate to contact me using the form below.
         </p>
         <div className="contact-form">
-            <form name="contact" ref={form} onSubmit={sendEmail}>
+            <form name="contact">
             <input type="hidden" name="form-name" value="contact" />
             <ul>
                 <li className="half">
