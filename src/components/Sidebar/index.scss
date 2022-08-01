@@ -10,11 +10,45 @@
     align-items: center;
     justify-content:space-between;
     padding: 24px 0;
+
+    @media screen and (max-width: 480px){
+      position: relative;
+      width: 100%;
+      height: 100px;
+      flex-direction: row;
+    }
+
+    .desktop-navigation{
+      display: block;
+
+    @media screen and (max-width: 480px){
+      display: none;
+      }
+    }
+
+    .mobile-navigation{
+      display:none;
+
+    @media screen and (max-width: 480px){
+      display:block;
+    }
+  }
+
+    button {
+      left: 40px;
+      top: 40px;
+      z-index: 10;
+      cursor: pointer;
+    }
   
     .logo {
       display: block;
       width: 100%;
       padding: 0;
+      @media screen and (max-width: 480px){
+        width: 25%;
+        height: 100%
+      }
   
       img {
         display: block;
@@ -22,11 +56,18 @@
         width: 36px;
         height: auto;
         transform: scale(2);
+
+        @media screen and (max-width: 480px){
+          margin: auto 24px;
+          transform: scale(1.8)
+        }
   
         &.sub-logo {
           width: 50px;
         }
       }
+
+      
     }
   
     nav {
