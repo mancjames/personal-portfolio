@@ -7,7 +7,17 @@
 .top-tags {
     bottom: auto;
     top: 35px;
+
+    @media screen and (max-width: 480px){
+      top: 20px;
+    }
   }
+
+.bottom-tags {
+  @media screen and (max-width: 480px){
+    top: 75%;
+  }
+}
   
 .tags {
     color: #ffd700;
@@ -17,16 +27,20 @@
     left: 120px;
     font-size: 18px;
     font-family: 'La Belle Aurore', cursive;
+
+    @media screen and (max-width: 480px){
+      left: 10px;
+    }
   }
   
 .bottom-tag-html {
-    margin-left: -20px;
+    margin-left: -5px;
   }
   
 .container {
     width: 100%;
     will-change: contents;
-    height: 90%;
+    height: 80%;
     min-height: 566px;
     position: absolute;
     opacity: 0;
@@ -36,6 +50,10 @@
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+
+    @media screen and (max-width: 480px){
+      top: 0;
+    }
   }
 
 .container.contact-page,

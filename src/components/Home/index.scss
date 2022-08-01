@@ -6,6 +6,15 @@
       transform: translateY(-50%);
       width: 40%;
       max-height: 90%;
+
+      @media screen and (max-width: 912px){
+        margin-left: 50px;
+      }
+
+      @media screen and (max-width: 540px){
+        margin-left: 0;
+        width: 90%;
+      }
     }
   
     h1 {
@@ -34,10 +43,14 @@
         color: #ffd700;
         font-size: 18px;
         position: absolute;
-        margin-top: 18px;
+        margin-top: 50px;
+        left: -35px;
         margin-left: 20px;
         animation: fadeIn 1s 1.7s backwards;
         opacity: 0.6;
+        @media screen and (max-width: 480px){
+          margin-top: 40px;
+        }
       }
     }
   
@@ -49,6 +62,9 @@
       font-family: sans-serif;
       letter-spacing: 3px;
       animation: fadeIn 1s 1.8s backwards;
+
+      margin-top: -40px;
+        margin-top: 40px;
     }
   
     .flat-button {
