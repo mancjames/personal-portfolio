@@ -35,7 +35,7 @@ const Contact = () => {
         emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
           .then(() => {
             alert('Message successfully sent!')
-            window.location.reload()
+            window.location.reload(false)
           }, (error) => {
             alert('Failed to send the message, please try again');
             console.log(error.text)
@@ -57,7 +57,8 @@ const Contact = () => {
             If you have any requests or questions, please don't hesitate to contact me using the form below.
         </p>
         <div className="contact-form">
-            <form ref={form} onSubmit={sendEmail}>
+            <form name="contact" ref={form} onSubmit={sendEmail}>
+            <input type="hidden" name="form-name" value="contact" />
             <ul>
                 <li className="half">
                   <input placeholder="Name" type="text" name="name" required />
