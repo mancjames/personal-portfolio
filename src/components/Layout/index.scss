@@ -8,13 +8,13 @@
     bottom: auto;
     top: 35px;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 720px){
       top: 20px;
     }
   }
 
 .bottom-tags {
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 720px){
     top: 75%;
   }
 }
@@ -28,7 +28,7 @@
     font-size: 18px;
     font-family: 'La Belle Aurore', cursive;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 720px){
       left: 10px;
     }
   }
@@ -51,7 +51,7 @@
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 720px){
       top: 0;
     }
   }
@@ -70,6 +70,10 @@
       position: relative;
       margin-bottom: 40px;
       left: -10px;
+      @media screen and (max-width: 380px){
+        font-size: 43px;
+        margin-bottom: 30px;
+      }
 
       &:before {
         content: '<h1>';
@@ -127,6 +131,13 @@
     vertical-align: middle;
     display: table-cell;
     max-height: 90%;
+    @media screen and (max-width: 912px){
+      margin-left: 50px;
+    }
+    @media screen and (max-width: 720px){
+      margin-left: 0;
+      width: 80%;
+    }
   }
 
   .text-animate-hover {

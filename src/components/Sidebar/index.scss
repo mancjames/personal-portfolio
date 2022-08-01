@@ -11,7 +11,7 @@
     justify-content:space-between;
     padding: 24px 0;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 720px){
       position: relative;
       width: 100%;
       height: 100px;
@@ -21,7 +21,7 @@
     .desktop-navigation{
       display: block;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 720px){
       display: none;
       }
     }
@@ -29,7 +29,7 @@
     .mobile-navigation{
       display:none;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 720px){
       display:block;
     }
   }
@@ -45,7 +45,7 @@
       display: block;
       width: 100%;
       padding: 0;
-      @media screen and (max-width: 480px){
+      @media screen and (max-width: 720px){
         width: 25%;
         height: 100%
       }
@@ -57,7 +57,7 @@
         height: auto;
         transform: scale(2);
 
-        @media screen and (max-width: 480px){
+        @media screen and (max-width: 720px){
           margin: auto 24px;
           transform: scale(1.8)
         }

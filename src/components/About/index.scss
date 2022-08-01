@@ -7,6 +7,14 @@
     position: absolute;
     right: 0;
     overflow: hidden;
+    @media screen and (max-width: 720px){
+      width: 50%;
+      height: 50%;
+      top: 500px;
+    }
+    @media screen and (max-width: 380px){
+      top: -20px;
+    }
   }
   
   .cubespinner {
@@ -17,6 +25,10 @@
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
     margin-left: calc(50% - 100px);
+    @media screen and (max-width: 720px){
+      transform-origin: 25px 25px 0;
+      margin-left: calc(50% - 25px);
+    }
   
     div {
       position: absolute;
@@ -30,25 +42,48 @@
       justify-content: center;
       align-items: center;
       box-shadow: 0 0 20px 0px lightyellow;
+      @media screen and (max-width: 720px){
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+      }
     }
   
     .face1 {
       transform: translateZ(100px);
+      @media screen and (max-width: 720px){
+        transform: translateZ(25px);
+      }
     }
     .face2 {
       transform: rotateY(90deg) translateZ(100px);
+      @media screen and (max-width: 720px){
+        transform: rotateY(90deg) translateZ(25px);
+      }
     }
     .face3 {
       transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+      @media screen and (max-width: 720px){
+        transform: rotateY(90deg) rotateX(90deg) translateZ(25px);
+      }
     }
     .face4 {
       transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+      @media screen and (max-width: 720px){
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(25px)
+      }
     }
     .face5 {
       transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+      @media screen and (max-width: 720px){
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(25px);
+      }
     }
     .face6 {
       transform: rotateX(-90deg) translateZ(100px);
+      @media screen and (max-width: 720px){
+        transform: rotateX(-90deg) translateZ(25px);
+      }
     }
   }
   
