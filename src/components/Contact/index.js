@@ -35,7 +35,7 @@ const Contact = () => {
         emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
           .then(() => {
             alert('Message successfully sent!')
-            window.location.reload(false)
+            window.location.reload()
           }, (error) => {
             alert('Failed to send the message, please try again');
             console.log(error.text)

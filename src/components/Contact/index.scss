@@ -73,6 +73,11 @@
       float: right;
       text-align: center;
       margin-right: 10px;
+
+      &:hover {
+        background: #ffd700;
+        color: #333;
+      }
     }
   }
 
