@@ -57,7 +57,7 @@ const Contact = () => {
             If you have any requests or questions, please don't hesitate to contact me using the form below.
         </p>
         <div className="contact-form">
-            <form name="contact" ref={form} onSubmit={sendEmail}>
+            <form name="contact" ref={form} onSubmit={sendEmail} netlify>
             <input type="hidden" name="form-name" value="contact" />
             <ul>
                 <li className="half">
