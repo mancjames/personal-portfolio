@@ -9,7 +9,7 @@
     top: 35px;
 
     @media screen and (max-width: 720px){
-      top: 20px;
+      top: 5px;
     }
   }
 
@@ -28,6 +28,9 @@
     font-size: 18px;
     font-family: 'La Belle Aurore', cursive;
 
+    @media screen and (max-width: 920px){
+      left: 95px;
+    }
     @media screen and (max-width: 720px){
       left: 10px;
     }
@@ -70,9 +73,12 @@
       position: relative;
       margin-bottom: 40px;
       left: -10px;
-      @media screen and (max-width: 380px){
+      @media screen and (max-width: 720px){
         font-size: 43px;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+      }
+      @media screen and (max-width: 320px){
+        font-size: 33px;
       }
 
       &:before {
@@ -133,6 +139,7 @@
     max-height: 90%;
     @media screen and (max-width: 912px){
       margin-left: 50px;
+      width: 80%;
     }
     @media screen and (max-width: 720px){
       margin-left: 0;

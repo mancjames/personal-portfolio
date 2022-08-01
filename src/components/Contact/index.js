@@ -92,7 +92,7 @@ const Contact = () => {
             </form>
         </div>
        </div>
-       <div className="info-map">
+       <div className="info-map responsive-info">
           James Hay,
           <br />
           Middleton,
@@ -100,7 +100,7 @@ const Contact = () => {
           Manchester <br />
           UK <br />
         </div>
-        <div className="map-wrap">
+        <div className="map-wrap responsive-map">
         <MapContainer center={[53.5459, -2.2019]} zoom={13} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
